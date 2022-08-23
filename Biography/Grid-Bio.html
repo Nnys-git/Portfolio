@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,132 +8,150 @@
     <title>Biography</title>
     <style>
         .container {
-            display:grid;
-            /* display設定為grid會讓該元素變為格線布局 */
-            grid-template-columns: minmax(140px,auto) 1.5fr 3fr 1.5fr 1fr; /*repeat(重複幾個, 單位)*/
-            /* grid-template-columns 定義著你要幾行，你打幾個數字就有幾行*/
-            /* (可以px和fr混用 px可以固定某行寬度 fr(fraction)就是瀏覽器寬度扣除px之後剩下的等分)  */
-            grid-template-rows: 200px 100px 30px 120px 200px;
-            /* minmax定義列高最小為200px, 最高隨瀏覽器大小自動*/   
+            display: grid;
+            grid-template-columns: minmax(140px, auto) 1.5fr 3fr 1.5fr 1fr;
+            grid-template-rows: 205px 90px minmax(140px,auto) minmax(200px, auto);
         }
 
-        li{
+        li {
             list-style-type: none;
-            padding-left:9px;
+            padding-left: 9px;
         }
 
-        img{
-            max-width:225px;
-            height:auto;
+        img {
+            max-width: 225px;
+            height: auto;
             border-radius: 50%;
+            border:0.2px solid black;
         }
 
-        h4{
-            display:inline;  
+        h4 {
+            display: inline;
         }
 
-        i{
-            width:20px;
+        i {
+            width: 20px;
         }
 
-        .colorNborder{
+        p {
+            text-indent: 2em;
+            margin:2px 0.5em;
+        }
+
+        .colorNborder {
             background-color: cornsilk;
             border: 2px solid orange;
         }
-        .cont-photo{
-            grid-column: 1/3 ;
+
+        .cont-photo {
+            grid-column: 1/3;
             text-align: center;
-            overflow:hidden;
-        }
-        .cont-intro{
-            grid-column: 3/6 ;
-            text-align: left;
-            vertical-align: center;
+            overflow: hidden;
         }
 
-        .cont-banner{
+        .cont-intro {
+            grid-column: 3/6;
+            align-self: center;
+        }
+
+        .cont-banner {
             grid-column: 1/6;
         }
-        .cont-edu{
+
+        .cont-edu {
             grid-column: 1/6;
         }
-        .cont-ability1{
+
+        .cont-ability1 {
             grid-column: 1/3;
         }
-        .cont-ability2{
+
+        .cont-ability2 {
             grid-column: 3/4;
         }
-        .cont-ability3{
+
+        .cont-ability3 {
             grid-column: 4/6;
         }
-        .cont-bio{
+
+        .cont-bio {
             grid-column: 1/6;
         }
-        .foot{
+
+        .foot {
             grid-column: 1/6;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .foot a{
+            padding-left: 10px;
+            text-decoration: none;
+            color:black;
         }
     </style>
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
+
 <body>
-<div class="container">
-    <div class="cont-photo colorNborder"><img src="https://live.staticflickr.com/65535/52303017706_5ece7d4474_o.png"></div>
-    <div class="cont-intro colorNborder"><br><br><br>
-        <li>透過程式語言將心中的畫面呈現在眼前
-            <br>令我感到莫大的成就感。</li>
-        <li><i class="icon-envelope-alt "></i> sonic9876542000@gmail.com</li>
-        <li><i class="icon-mobile-phone icon-large"></i> 0936-913-758</li>
-        <li><i class="icon-map-marker "></i> New Taipei, TW</li>     
+    <div class="container">
+        <div class="cont-photo colorNborder"><img
+                src="https://live.staticflickr.com/65535/52303017706_5ece7d4474_o.png"></div>
+        <div class="cont-intro colorNborder">
+            <li>透過程式語言將心中的畫面呈現在眼前
+                <br>令我感到莫大的成就感。
+            </li>
+            <li><i class="icon-suitcase"></i> 應徵職務:前端工程師</li>
+            <li><i class="icon-envelope"></i> sonic9876542000@gmail.com</li>
+            <li>&nbsp<i class="icon-mobile-phone icon-large"></i> 0936-913-758</li>
+            <li>&nbsp<i class="icon-map-marker "></i> New Taipei, TW</li>
+        </div>
+
+        <div class="cont-edu colorNborder">
+            <h4>專業訓練</h4>
+            <li>-資策會:AI與深度學習應用工程師就業養成班 - 2022.03~2022.07</li>
+            <h4>教育程度</h4>
+            <li>-淡江大學:土木工程學系營建企業組 - 2017.01畢業</li>
+            
+        </div>
+        <div class="cont-ability1 colorNborder ">
+            <h4>專業技能</h4><br>
+            <h4>&nbsp<i class="icon-double-angle-right"></i>&nbspFrontEnd</h4>
+            <li>-熟悉HTML5、CSS3</li>
+            <li>-熟悉Bootstrap5</li>
+            <li>-透過JavaScript、jQuery頁面互動</li>
+            <li>-了解基礎Vue.js指令</li>
+        </div>
+        <div class="cont-ability2 colorNborder">
+            <br>
+            <h4>&nbsp<i class="icon-double-angle-right"></i>&nbspBackEnd</h4>
+            <li>-透過Java Servlet實作JSP頁面</li>
+            <li>-透過Java串接MySQL資料庫</li>
+            <li>-實作Tomcat伺服器架設</li>
+        </div>
+        <div class="cont-ability3 colorNborder">
+            <br>
+            <h4>&nbsp<i class="icon-double-angle-right"></i>&nbspOther</h4>
+            <li>-基礎Git、GitHub指令</li>
+            <li>-基礎Linux指令</li>
+        </div>
+        <div class="cont-bio colorNborder ">
+            <h4>自傳</h4>
+            <p>我是林哲緯，獅子座O型，喜歡旅行、攝影，每次旅行前的規劃都令我期待又興奮，旅行中的攝影作品都以照片記錄在自己的IG帳號中，培養自己的美感與文字能力。科系選擇土木的關係，經歷的工作都是工地現場監工，工作內容主要係與土木專業師傅溝通施作順序、協調進度，使工地進度如期完成。期望這樣的溝通能力也能在貴公司實用，與公司同事一同完成一項專案。</p>
+            <p>決定參與資展國際的專業訓練課程，已經下定了決心，將Java、Python、…等程式語言打好基礎，期望在未來從事資訊科技相關職位。在資展的課程當中，讓我看見自己更多的可能性，尤其是課程教到HTML、CSS、Javascript、JQuery等使用者介面相關課程的時候。
+                從html建立基礎架構、內容，透過CSS選擇器新增樣式與頁面排版設定，再透過Javascript、JQuery實現更多與使用者互動的功能。對我來說，能將心中的畫面、功能透過標籤指令呈現在瀏覽器頁面上，實際跑程式也成功實現期望的畫面，令我感到莫大的成就感。
+            </p>
+            <p>在這半年訓練過程當中也遇到不少難解的問題，也在過程中培養網路查詢解答的能力，再不清楚也會與同學討論，目標是將觀念搞懂，完成任務。附件中的小專題也是結合html、css、javaweb，並搭配jQuery創造使用的的互動性體驗，搭配自己平時的攝影作品，集成一個作品集網站，此外網站與資料庫結合，設計了人員管理系統，可以集合更多愛好攝影的同好透過我製作的網站一同享受攝影的樂趣。
+            </p>
+            <p>初入公司開始期望能夠達成上級主管交辦的工作、如期達成，並規劃在進入公司一年期間，盡快熟悉工作流程，並且以用戶體驗提升、網頁性能優化為目標，努力在工作外的時間自主學習，將學習的筆記心得彙整成一個部落格，供自己及同事一同成長學習。
+            </p>
+        </div>
+        <div class="colorNborder foot">
+            <a href="https://github.com/Nnys-git/Portfolio"><i class="icon-github icon-2x"></i></a>
+            <a href="https://www.instagram.com/nnys_life/"><i class="icon-instagram icon-2x"></i></a>
+            <a href="mailto:sonic9876542000@gmail.com?body=謝謝你的來信!"><i class="icon-envelope-alt icon-2x"></i></a>
+        </div>
     </div>
-    
-    <div class="cont-edu colorNborder">
-        <h4>專業訓練:</h4>  
-        <li>資策會:AI與深度學習應用工程師就業養成班 - 2022.03~2022.07</li>
-        <h4>教育程度:</h4>
-        <li>淡江大學:土木工程學系營建企業組 - 2017.01畢業</li>
-    </div>
-    <div class="cont-banner colorNborder">
-        <h4>專業技能:</h4>
-    </div>
-    <div class="cont-ability1 colorNborder ">
-        <h4>Front-End</h4> 
-        <li>網頁框架: HTML、CSS、Bootstrap</li>
-        <li>動態互動: JavaScript、jQuery、Vue.js</li>
-    </div>
-    <div class="cont-ability2 colorNborder">
-        <h4>Back-End</h4>
-        <li>使用語言: Java</li>
-        <li>網頁技術: Java Servlet、JSP、MySQL</li>
-        <li>伺服器: Tomcat</li>
-    </div>
-    <div class="cont-ability3 colorNborder">
-        <h4>Other</h4>
-        <li>版本控制: GitBash、Github、Linux</li>
-        <li>攝影調光: Lightroom</li>
-        <li>影片剪輯: Premiere</li>
-    </div>
-    <div class="cont-bio colorNborder ">
-        <h4>自傳:</h4>
-        <div>我是林哲緯，獅子座O型，喜歡旅行、攝影，每次旅行前的規劃都令我期待又興奮，旅行中的攝影作品也記錄在自己的作品IG帳號中，培養自己的美感與文字能力。
-科系選擇土木的關係，經歷的工作都是工地現場監工，工作內容主要係與土木專業師傅溝通施作順序、協調進度，使工地進度如期完成。期望這樣的溝通能力也能在貴公司實用，與公司同事一同完成一項專案
-  決定參與資展國際的專業訓練課程，已經下定了決心，將Java、Python、…等程式語言打好基礎，期望在未來從事資訊科技相關職位。在資展的課程當中，讓我看見自己更多的可能性，尤其是課程教到HTML、CSS、Javascript、JQuery等使用者介面相關課程的時。
-  從html建立基礎架構、內容，透過CSS選擇器新增樣式與頁面排版設定，再透過Javascript、JQuery實現更多與使用者互動的功能。對我來說，能將心中的畫面、功能透過標籤指令呈現在瀏覽器頁面上，實際跑程式也成功實現期望的畫面，令我感到莫大的成就感。
-  在這半年訓練過程當中也遇到不少難解的問題，也在過程中培養網路查詢解答的能力，再不清楚也會與同學討論，目標是將觀念搞懂，完成任務。附件中的小專題也是結合html、css、javaweb，並搭配jQuery創造使用的的互動性體驗，搭配自己平時的攝影作品，集成一個作品集網站，此外網站與資料庫結合，設計了人員管理系統，可以集合更多愛好攝影的同好透過我製作的網站一同享受攝影的樂趣。
-   初入公司開始期望能夠達成上級主管交辦的工作、如期達成，並規劃在進入公司一年期間，盡快熟悉工作流程，並且以用戶體驗提升、網頁性能優化為目標，努力在工作外的時間自主學習，將學習的筆記心得彙整成一個部落格，供自己及同事一同成長學習。
-    </div>    
-    </div>
-    <div class="colorNborder ">7</div>
-    <div class="colorNborder ">8</div>
-    <div class="colorNborder ">9</div>
-    <div class="colorNborder ">10</div>
-    <div class="colorNborder ">11</div>
-    <div class="colorNborder ">12</div>
-    <div class="colorNborder ">13</div>
-    <div class="colorNborder ">14</div>
-    <div class="colorNborder ">15</div>
-    
-</div>
-<script></script>
-    
+    <script></script>
 </body>
 </html>
